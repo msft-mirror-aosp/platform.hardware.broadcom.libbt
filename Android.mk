@@ -12,7 +12,7 @@ else
   bdroid_CFLAGS += -DHAS_NO_BDROID_BUILDCFG
 endif
 
-BDROID_DIR := $(TOP_DIR)system/bt
+BDROID_DIR := $(TOP_DIR)packages/modules/Bluetooth/system
 
 ifeq ($(strip $(USE_BLUETOOTH_BCM4343)),true)
 LOCAL_CFLAGS += -DUSE_BLUETOOTH_BCM4343
@@ -54,6 +54,8 @@ LOCAL_SHARED_LIBRARIES := \
         liblog
 
 LOCAL_MODULE := libbt-vendor
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
+LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_OWNER := broadcom
